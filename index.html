@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<script src="function.js"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<audio id="audio" src="music/mylove.aac" preload loop></audio>
+<div class="header_wrap">
+	<div class="top">
+		<span id="logo"></span>
+		<span id="redrock">RedRock</span>
+		<canvas id="close" width="10" height="10"></canvas>
+		<canvas id="minimode" width="10" height="10"></canvas>
+		<canvas id="minimize" width="10" height="10"></canvas>	
+	</div>
+	<div class="control">
+		<div id="album"><img src="image/album0.jpg"/></div>
+		<div id="main_control">
+			<div id="title">Westlife - My Love</div>
+			<div id="love"></div>
+			<div id="share"></div>
+			<div id="jdt_wrap">
+				<span id="long_jdt">
+					<span id="ed"></span>
+					<span id="jdt"></span>
+				</span>
+
+			</div>
+			<div id="timer">
+				<span id="time1"></span>
+				<span id="time2"></span>
+				<span id="time0"></span>
+				<span id="time3"></span>
+				<span id="time4"></span>
+			</div>
+			<div class="controler">
+				<span id="prev" title="前一首"><span id="prev_inner1"></span><span id="prev_inner2"></span></span>
+				<span id="play" title="播放" onclick="playit()"><span id="play_inner"></span></span>
+				<span id="pause" title="暂停" onclick="pauseit()"><span id="pause_inner1"></span><span id="pause_inner2"></span></span>
+				<span id="next" title="下一首"><span id="next_inner1"></span><span id="next_inner2"></span></span>
+				<span id="random" title="随机播放"></span>
+			</div>
+		</div>
+	</div>
+	<div class="tools">
+		<div id="sound">
+			<span id="sound_mute"></span>
+			<span id="sound_ed"></span>
+			<span id="sound_jdt"></span>
+		</div>
+		<div id="commander">
+			<span id="cmd_playlist" onclick="plt()"></span>
+			<span id="cmd_equalizer" onclick="alert('还没做')"></span>
+			<span id="cmd_lyrics" onclick="alert('还没做')"></span>
+			<span id="cmd_musicWindow" onclick="alert('还没做')"></span>
+		</div>
+	</div>
+</div>
+	<div class="playlist_wrap" style="opacity:1;">
+		<span id="playlist_logo" class="icon-list-view icon-small"></span>
+		<span id="playlist_pls">播放列表</span>
+		<span id="playlist_close" onclick="plt()"></span>
+		<div id="playlist_left">
+			<span id="plt_0" class="plts"><a href="##">[默认]</a></span>
+		</div>
+		<div id="playlist_scrollbar">
+			<div id="playlist_scrollbar_button"></div>
+		</div>
+		<div id="playlist_right">
+			<span  class="musics">1.<a id="sd" onclick="changeM(this,0)">Westlife - My Love</a></span>
+			<span  class="musics">2.<a onclick="changeM(this,1)">井内舞子 - Dear My Friend</a></span>
+			<span  class="musics">3.<a onclick="changeM(this,2)">Marc Terenzi - Love to be Loved by you</a></span>
+		</div>
+		<span id="toolbar"></span>
+	</div>
+
+	<script src="jdt.js"></script>
+</body>
+</html>
